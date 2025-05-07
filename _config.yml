@@ -25,7 +25,12 @@ baseurl: ""       # leave blank unless you’re deploying to a subpath
 url: "https://EjkHub.github.io"  # adjust if needed
 
 # Theme
-theme: just-the-docs
+# theme: just-the-docs
+remote_theme: "pmarsceill/just-the-docs"
+
+# and tell Jekyll to load the remote-theme plugin
+plugins:
+  - jekyll-remote-theme
 
 # Navigation order (used by Just the Docs)
 nav_order:
