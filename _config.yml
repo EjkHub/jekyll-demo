@@ -1,23 +1,15 @@
-# Site settings
+# Tell GitHub Pages to pull the Just the Docs theme remotely
+remote_theme: pmarsceill/just-the-docs
+
+# Any plugins you want (these are supported by GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Just the Docs options:
 title: "My Jekyll Demo"
 description: "A quick demo of Just the Docs"
-baseurl: ""      # leave blank if serving at /<repo-name>/
-url: "https://EjkHub.github.io/jekyll-demo"
-
-# Theme
-theme: just-the-docs
-
-# Navigation for Just the Docs
+search_enabled: true
 nav_order:
   - Home
   - About
-
-# Optional features
-search_enabled: true
-table_of_contents: any
-
-# Plugins
-plugins:
-  - jekyll-feed
-
-# (remove any `remote_theme:` lines—using the gem directly)
