@@ -1,0 +1,23 @@
+{"0": {
+    "doc": "About",
+    "title": "About",
+    "content": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com . You can find the source code for Minima at GitHub: jekyll / minima . You can find the source code for Jekyll at GitHub: jekyll / jekyll . ",
+    "url": "/about/",
+    
+    "relUrl": "/about/"
+  },"1": {
+    "doc": "Home",
+    "title": "Welcome to My Jekyll Demo",
+    "content": "This is a quick‐and‐dirty Just the Docs site. Use the nav above to explore “About” or other pages you add. ",
+    "url": "/#welcome-to-my-jekyll-demo",
+    
+    "relUrl": "/#welcome-to-my-jekyll-demo"
+  },"2": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  }
+}
