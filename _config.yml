@@ -15,6 +15,12 @@ nav_order:
 # Enable the built-in search index
 search_enabled: true
 search_json:    true
+search_posts:   true        # only if you want blog posts
+collections:
+  specs:
+    output: true            # example custom collection
+search:
+  collections: [specs]      # whitelist it for the index
 
 # If this is a project page (not your user/org root site):
 baseurl: "/jekyll-demo"
