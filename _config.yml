@@ -1,13 +1,12 @@
-# Tell GitHub Pages’ builder which remote theme to pull:
 remote_theme: pmarsceill/just-the-docs
 
-# Plugins (jekyll-remote-theme is already bundled by github-pages)
+# Optional: if you need to list plugins, these are already in the GH-Pages gem:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Just the Docs options:
-title:       "My Jekyll Demo"
+# Just the Docs settings
+title: "My Jekyll Demo"
 description: "A quick demo of Just the Docs"
 nav_order:
   - Home
@@ -16,3 +15,6 @@ nav_order:
 # Enable the built-in search index
 search_enabled: true
 search_json:    true
+
+# If this is a project page (not your user/org root site):
+baseurl: "/jekyll-demo"
