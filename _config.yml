@@ -25,5 +25,5 @@ search:
 # If this is a project page (not your user/org root site):
 baseurl: "/jekyll-demo"
 
-logo: /assets/images/origColor.jpg
+# logo: /assets/images/origColor.jpg
 
