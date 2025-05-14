@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axiom Logo with Hyperlinks</title>
+    <style>
+        .logo-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .logo-svg {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Style for clickable areas */
+        .logo-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .logo-link {
+            position: absolute;
+            display: block;
+            transition: all 0.3s ease;
+            /* Debug: uncomment to see link areas */
+            /* border: 1px solid red; */
+        }
+        
+        /* Position each link based on the text position in the SVG */
+        .link-love { top: 21.5%; left: 45.5%; width: 9%; height: 3.5%; }
+        .link-patience { top: 27%; left: 41.5%; width: 17.5%; height: 3.5%; }
+        .link-perseverance { top: 33%; left: 35.5%; width: 29%; height: 3.5%; }
+        .link-freedom { top: 38.5%; left: 41.5%; width: 17%; height: 3.5%; }
+        .link-forgiveness { top: 45%; left: 37%; width: 26%; height: 3.5%; }
+        .link-humility { top: 50.5%; left: 41.5%; width: 17%; height: 3.5%; }
+        .link-willingness { top: 56%; left: 37%; width: 26%; height: 3.5%; }
+        .link-courage { top: 62%; left: 40%; width: 20%; height: 3.5%; }
+        .link-honesty { top: 68%; left: 41.5%; width: 17%; height: 3.5%; }
+        .link-surrender { top: 73.5%; left: 26%; width: 47%; height: 3.5%; }
+        .link-faith { top: 80%; left: 45.5%; width: 9%; height: 3.5%; }
+        .link-acceptance { top: 86%; left: 37.5%; width: 25%; height: 3.5%; }
+		
+		
+		/* Add the trademark class here */
+		/* .trademark {
+        position: absolute;
+        top: 94%;
+        left: 60%;
+        font-size: 24px;
+        color: white;
+        font-family: Arial, sans-serif;
+		} */
+
+        .trademark {
+        position: absolute;
+        top: 94%;
+        left: 45%;
+        font-size: 18px;
+        color: white;
+        font-family: Arial, sans-serif;
+		}
+
+        /* Responsive trademark for sidebar */
+        .site-nav .trademark {
+        top: 90%; /* Move it up (was 94%) */
+        left: 60%; /* Move it more to the right (was 60%) */
+        /* !important ensures this rule overrides the general .trademark rule when the logo is in the sidebar (.site-nav)  */
+        font-size: 10px !important; /* smaller for sidebar */
+        }
+	    
+        /* Hover effect */
+        .logo-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+        
+        /* Optional: Add glow effect on hover */
+        .logo-link:hover::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <!-- Your SVG as an external file for cleaner code -->
+        <img
+        class="logo-svg"
+        src="{{ '/assets/images/Axiom_logo.svg' | relative_url }}"
+        alt="Axiom Logo"
+        width="100%"
+        height="auto">
+
+    
+        <!-- Clickable overlay -->
+        <div class="logo-links">
+            <a href="/love" class="logo-link link-love" aria-label="Love"></a>
+            <a href="/patience" class="logo-link link-patience" aria-label="Patience"></a>
+            <a href="/perseverance" class="logo-link link-perseverance" aria-label="Perseverance"></a>
+            <a href="/freedom" class="logo-link link-freedom" aria-label="Freedom"></a>
+            <a href="/forgiveness" class="logo-link link-forgiveness" aria-label="Forgiveness"></a>
+            <a href="/humility" class="logo-link link-humility" aria-label="Humility"></a>
+            <a href="/willingness" class="logo-link link-willingness" aria-label="Willingness"></a>
+            <a href="/courage" class="logo-link link-courage" aria-label="Courage"></a>
+            <a href="/honesty" class="logo-link link-honesty" aria-label="Honesty"></a>
+            <a href="/surrender" class="logo-link link-surrender" aria-label="Surrender and Trust"></a>
+            <a href="/faith" class="logo-link link-faith" aria-label="Faith"></a>
+            <a href="/acceptance" class="logo-link link-acceptance" aria-label="Acceptance"></a>
+			<div class="trademark">™</div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add visual feedback on hover
+        document.querySelectorAll('.logo-link').forEach(link => {
+            link.addEventListener('mouseover', function() {
+                // You can add additional hover effects here
+                console.log('Hovering over:', this.getAttribute('aria-label'));
+            });
+        });
+    </script>
+</body>
+</html>

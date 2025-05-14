@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axiom Logo with Hyperlinks</title>
+    <style>
+        .logo-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .logo-svg {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Style for clickable areas */
+        .logo-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .logo-link {
+            position: absolute;
+            display: block;
+            transition: all 0.3s ease;
+            /* Debug: uncomment to see link areas */
+            border: 1px solid red;
+        }
+        
+        /* Position each link based on the text position in the SVG */
+        .link-love { top: 23.8%; left: 44%; width: 12%; height: 3.5%; }
+        .link-patience { top: 28.7%; left: 41.5%; width: 17%; height: 3.5%; }
+        .link-perseverance { top: 33.7%; left: 36.5%; width: 26.5%; height: 3.5%; }
+        .link-freedom { top: 38.6%; left: 41.5%; width: 17%; height: 3.5%; }
+        .link-forgiveness { top: 43.6%; left: 37.2%; width: 25.5%; height: 3.5%; }
+        .link-humility { top: 48.6%; left: 41.8%; width: 16.5%; height: 3.5%; }
+        .link-willingness { top: 53.5%; left: 38%; width: 24%; height: 3.5%; }
+        .link-courage { top: 58.5%; left: 41.5%; width: 17%; height: 3.5%; }
+        .link-honesty { top: 63.5%; left: 41.3%; width: 17.5%; height: 3.5%; }
+        .link-surrender { top: 68.4%; left: 28.5%; width: 43%; height: 3.5%; }
+        .link-faith { top: 73.4%; left: 44.8%; width: 10.5%; height: 3.5%; }
+        .link-acceptance { top: 78.3%; left: 39%; width: 22%; height: 3.5%; }
+        
+        /* Hover effect */
+        .logo-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+        
+        /* Optional: Add glow effect on hover */
+        .logo-link:hover::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <!-- Your SVG as an external file for cleaner code -->
+        <img
+        class="logo-svg"
+        src="{{ '/assets/images/Axiom_logo.svg' | relative_url }}"
+        alt="Axiom Logo"
+        width="100%"
+        height="auto">
+        
+        <!-- Clickable overlay -->
+        <div class="logo-links">
+            <a href="/love" class="logo-link link-love" aria-label="Love"></a>
+            <a href="/patience" class="logo-link link-patience" aria-label="Patience"></a>
+            <a href="/perseverance" class="logo-link link-perseverance" aria-label="Perseverance"></a>
+            <a href="/freedom" class="logo-link link-freedom" aria-label="Freedom"></a>
+            <a href="/forgiveness" class="logo-link link-forgiveness" aria-label="Forgiveness"></a>
+            <a href="/humility" class="logo-link link-humility" aria-label="Humility"></a>
+            <a href="/willingness" class="logo-link link-willingness" aria-label="Willingness"></a>
+            <a href="/courage" class="logo-link link-courage" aria-label="Courage"></a>
+            <a href="/honesty" class="logo-link link-honesty" aria-label="Honesty"></a>
+            <a href="/surrender" class="logo-link link-surrender" aria-label="Surrender and Trust"></a>
+            <a href="/faith" class="logo-link link-faith" aria-label="Faith"></a>
+            <a href="/acceptance" class="logo-link link-acceptance" aria-label="Acceptance"></a>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add visual feedback on hover
+        document.querySelectorAll('.logo-link').forEach(link => {
+            link.addEventListener('mouseover', function() {
+                // You can add additional hover effects here
+                console.log('Hovering over:', this.getAttribute('aria-label'));
+            });
+        });
+    </script>
+</body>
+</html>
