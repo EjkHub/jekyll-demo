@@ -1,0 +1,25 @@
+to get the logo in the sidebar had to override site_nav.html this way
+
+Copy the file into your project
+# gem path on your machine (adjust drive/folder if different)
+C:\Ruby34-x64\lib\ruby\gems\3.4.0\gems\just-the-docs-0.10.1\_includes\components\site_nav.html
+
+Paste it into the matching place in your site:
+your-site\
+└─ _includes\
+   └─ components\
+      └─ site_nav.html   ← (now overrides the theme copy)
+
+Insert the logo include
+Open the copied _includes/components/site_nav.html.
+Near the top you’ll see the main <nav> opening tag, e.g.
+<nav aria-label="Main" id="site-nav" class="site-nav">
+  {% include logo.html %} --Here--
+   etc...
+
+{% include … %} always starts its search at the project-level _includes/ folder, not at the location of the file that calls it. If you wanted to include a file that’s inside a sub-folder you would write, e.g., {% include components/foo.html %} – still relative to the root _includes/.
+your-project/
+├─ _includes/               ← include “root”
+│   ├─ logo.html            ← Jekyll finds this
+│   └─ components/
+│       └─ site_nav.html    ← calls {% include logo.html %}

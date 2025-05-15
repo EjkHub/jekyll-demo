@@ -99,6 +99,16 @@
 <body>
     <div class="logo-container">
         <!-- Your SVG as an external file for cleaner code -->
+        <!-- <img> - HTML image element -->
+        <!-- class="logo-svg" - CSS class for styling (you can target this with CSS) -->
+        <!-- src="{{ '/assets/images/Axiom_logo.svg' | relative_url }}" - This is Jekyll/Liquid templating: -->
+        <!-- {{ }} - Liquid template tags -->
+        <!-- '/assets/images/Axiom_logo.svg' - Path to the SVG file -->
+        <!-- | relative_url - Jekyll filter that converts the path to a relative URL (adds your site's baseurl if configured) -->
+        <!-- alt="Axiom Logo" - Alternative text for accessibility/screen readers -->
+        <!-- width="100%" - Makes the image take full width of its container -->
+        <!-- height="auto" - Maintains aspect ratio automatically -->
+        <!-- The relative_url filter ensures the path works correctly whether your site is at the root domain or in a subdirectory. -->
         <img
         class="logo-svg"
         src="{{ '/assets/images/Axiom_logo.svg' | relative_url }}"
